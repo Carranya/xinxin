@@ -15,6 +15,13 @@
         {% endblock %}
     </head>
     <body>
+        {% block navi %}
+            {% include 'navi.twig' %}
+        {% endblock %}
+
         {% block body %}{% endblock %}
+        {% block footer %}
+            {% include 'footer.twig' %}
+        {% endblock %}
     </body>
 </html>

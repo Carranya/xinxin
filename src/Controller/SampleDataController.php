@@ -17,7 +17,7 @@ class SampleDataController extends AbstractController
 
         $blogs = [
             ['title' => 'Happy New Year 2023!!!', 'date' => '2023-01-22', 'descripe' => 'Wir wünschen Ihnen alles Gute ins Jahr des Hasens 2023!!!', 'img' => 'newyear'],
-            ['title' => 'Mondfest 2023', 'date' => '2022-09-10', 'descripe' => 'Alles Gute zum Mondfest 2022', 'img' => 'moon'],
+            ['title' => 'Mondfest 2023', 'date' => '2022-09-10', 'descripe' => 'Alles Gute zum Mondfest 2022!!!', 'img' => 'moon'],
         ];
 
         foreach($blogs as $blog){

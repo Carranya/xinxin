@@ -1710,6 +1710,14 @@ video {
   background-image: url('/img/back.jpg');
 }
 
+.bg-\[url\(\'\.\/img\/back\.jpg\'\)\] {
+  background-image: url('./img/back.jpg');
+}
+
+.bg-\[url\(\'img\/back\.jpg\'\)\] {
+  background-image: url('img/back.jpg');
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;

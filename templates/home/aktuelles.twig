@@ -11,7 +11,8 @@
         {% endif %}
         <div class='flex justify-center'>
             <div class='bg-red-400 w-1/2 m-5 p-5 shadow-xl rounded-xl text-yellow-300 text-center'>
-                <img src='/img/{{aktuell.img}}.jpg' class='{{ float }} w-80 m-3 rounded-xl'>
+                {% set link = aktuell.img %}
+                <img src='{{ asset(link) }}' class='{{ float }} w-80 m-3 rounded-xl'>
                 <h2 class='text-2xl underline'>{{aktuell.title}}</h2>
                 <span class='text-sm italic'>Gepostet am: {{aktuell.date | date('d. M. Y')}}</span><br><br>
                 <span>{{aktuell.descripe}}</span>

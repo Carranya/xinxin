@@ -2,5 +2,15 @@
 
 
 {% block body %}
-<div class='bg-red-300 text-2xl text-center'>Test</div>
+<div id='idHome' class="bg-[url('/img/back.jpg')] bg-center bg-no-repeat bg-fixed bg-cover h-screen">
+    <div class='flex justify-center items-center text-center h-screen font-bold text-8xl text-yellow-300'>
+        <span>
+        China Restaurant
+        <br>
+        Xin-Xin
+        </span>
+    </div>
+</div>
+{% include 'home/aktuelles.twig' %}
 {% endblock %}
+

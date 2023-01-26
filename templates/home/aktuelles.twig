@@ -1,0 +1,21 @@
+<div class='bg-red-300'>
+    <h1 class='text-center text-6xl font-bold text-yellow-300 underline p-5'>Aktuelles</h1>
+    {% set step = 0 %}
+    {% for aktuell in aktuelles %}
+        {% if step == 0 %}
+            {% set step = 1 %}
+            {% set float = 'float-left' %}
+        {% else %}
+            {% set step = 0 %}
+            {% set float = 'float-right' %}
+        {% endif %}
+        <div class='flex justify-center'>
+            <div class='bg-red-400 w-1/2 m-5 p-5 shadow-xl rounded-xl text-yellow-300 text-center'>
+                <img src='/img/{{aktuell.img}}.jpg' class='{{ float }} w-80 m-3 rounded-xl'>
+                <h2 class='text-2xl underline'>{{aktuell.title}}</h2>
+                <span class='text-sm italic'>Gepostet am: {{aktuell.date | date('d. M. Y')}}</span><br><br>
+                <span>{{aktuell.descripe}}</span>
+            </div>
+        </div>
+    {% endfor %}
+</div>

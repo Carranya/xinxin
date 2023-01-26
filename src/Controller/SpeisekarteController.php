@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Menu;
+use App\Repository\MenuRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,8 +11,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class SpeisekarteController extends AbstractController
 {
     #[Route('/speisekarte', name: 'speisekarte')]
-    public function index(): Response
+    public function index(MenuRepository $menuRepository): Response
     {
-        return $this->render('speisekarte/index.html.twig');
+        $menues = $menuRepository->findAll();
+        return $this->render('speisekarte/speisekarte.twig', [
+            'menues' => $menues,
+        ]);
     }
 }
